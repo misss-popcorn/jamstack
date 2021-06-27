@@ -1,0 +1,26 @@
+.sectionWrap {
+  background-color: #ffffff;
+  margin: 2rem;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border: 0.1rem solid #c0c0c0;
+  .profile {
+    width: 15rem;
+    height: fit-content;
+    position: relative;
+    div.profileItem:first-child {
+      padding-top: 3rem;
+    }
+    div.profileItem:last-child {
+      padding-bottom: 2rem;
+    }
+  }
+  .profilePicture {
+    position: absolute;
+    width: 6rem;
+    top: 15rem;
+    border-radius: 3rem;
+  }
+}

@@ -1,0 +1,21 @@
+.profileItem {
+  display: flex;
+  flex-direction: column;
+  background-color: #e8e8e8;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  div {
+    width: 50%;
+  }
+
+  .heading {
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+    margin-bottom: 0;
+  }
+  .content {
+    font-size: 0.7rem;
+    margin-top: 0;
+  }
+}

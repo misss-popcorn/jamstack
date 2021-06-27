@@ -1,0 +1,23 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.mainSection {
+  display: flex;
+  height: calc(100vh - 3rem);
+  aside {
+    padding: 2rem;
+    width: 10rem;
+
+    a {
+      font-size: 0.7rem;
+      color: #818181;
+    }
+  }
+  section {
+    background-color: #e8e8e8;
+    width: calc(100vw - 5rem);
+    display: flex;
+  }
+}
