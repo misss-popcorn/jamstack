@@ -1,4 +1,5 @@
 import "./ProfileItem.scss";
+
 const ProfileItem = ({ item }) => {
   return (
     <div className="profileItem">

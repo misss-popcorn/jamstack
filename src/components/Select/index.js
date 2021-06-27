@@ -1,4 +1,5 @@
 import "./index.scss";
+
 const Select = ({ options }) => {
   return (
     <select>
