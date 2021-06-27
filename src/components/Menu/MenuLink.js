@@ -1,30 +1,17 @@
-import { NavLink } from "react-router-dom";
-import Dashboard from "../../images/icons/dashboard@2x.png";
-import IncomingEnquiries from "../../images/icons/incoming-enq@2x.png";
-import IncomingQuotations from "../../images/icons/incoming-qout@2x.png";
-import Products from "../../images/icons/product@2x.png";
-import MyRequests from "../../images/icons/my-request@2x.png";
-import OrderHistory from "../../images/icons/order@2x.png";
-import Profile from "../../images/icons/profile@2x.png";
-import Settings from "../../images/icons/setting@2x.png";
+import { NavLink, useLocation } from "react-router-dom";
+import { imageMap } from "../../constants/imageMap";
 import "./MenuLink.scss";
 
-const imageMap = {
-  dashboard: Dashboard,
-  incomingEnquiries: IncomingEnquiries,
-  incomingQuotations: IncomingQuotations,
-  products: Products,
-  myRequests: MyRequests,
-  orderHistory: OrderHistory,
-  profile: Profile,
-  settings: Settings,
-};
-
 const MenuLink = ({ menu }) => {
+  let location = useLocation();
+  let image = imageMap[menu.icon];
+  if (location.pathname === menu.route) {
+    const activeIcon = `active${menu.icon}`;
+    image = imageMap[activeIcon];
+  }
   return (
     <>
       <div className="menuItem">
-        <img src={imageMap[menu.icon]} alt="icon"></img>
         <NavLink
           to={menu.route}
           activeClassName={"active"}
@@ -34,6 +21,7 @@ const MenuLink = ({ menu }) => {
             }
           }}
         >
+          <img src={image} alt="icon"></img>
           {menu.name}
         </NavLink>
       </div>
