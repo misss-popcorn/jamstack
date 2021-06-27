@@ -10,6 +10,10 @@ header {
   }
   .logout {
     padding: 1rem;
+    cursor: pointer;
+    :hover {
+      color: #3f99f2;
+    }
     img {
       vertical-align: bottom;
       width: 1rem;

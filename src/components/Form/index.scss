@@ -16,14 +16,17 @@
   }
   input,
   select {
-    color: #9fabb8;
+    ::placeholder {
+      color: #9fabb8;
+      font-size: 0.7rem;
+      line-height: 1rem;
+    }
+
     border: 0;
     outline: 0;
     background: transparent;
     border-bottom: 1px solid;
     padding: 0.5rem 0.5rem 0.5rem 0;
-    font-size: 0.7rem;
-    line-height: 1rem;
     width: 100%;
   }
   .formField {

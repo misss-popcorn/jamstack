@@ -21,7 +21,7 @@ const LoginContainer = () => {
         <Form>
           <h1>Login</h1>
           <p>
-            Don't have a account yet? <Link to="#">Sign Up</Link>
+            Don't have a account yet? <Link to="/signup">Sign Up</Link>
           </p>
           <Email />
           <Password />

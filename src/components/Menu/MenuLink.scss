@@ -1,5 +1,12 @@
 .menuItem {
   margin-top: 1.5rem;
+  cursor: pointer;
+  :hover {
+    color: #3f99f2;
+  }
+  .active {
+    color: #3f99f2;
+  }
   img {
     width: 1rem;
     padding-right: 0.5rem;

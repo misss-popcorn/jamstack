@@ -13,14 +13,16 @@
     div.profileItem:first-child {
       padding-top: 3rem;
     }
-    div.profileItem:last-child {
+    div.profileItem:nth-last-child(2) {
       padding-bottom: 2rem;
     }
   }
   .profilePicture {
     position: absolute;
     width: 6rem;
-    top: 15rem;
+    top: -48px;
+    left: 50%;
+    transform: translateX(-50%);
     border-radius: 3rem;
   }
 }

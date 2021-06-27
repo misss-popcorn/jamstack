@@ -1,18 +1,18 @@
 export const menuOptions = [
-  { name: "Dashboard", icon: "dashboard", route: "#" },
+  { name: "Dashboard", icon: "dashboard", route: "/dashboard" },
   {
     name: "Incoming Enquiries",
     icon: "incomingEnquiries",
-    route: "#",
+    route: "/incomingEnquiries",
   },
   {
     name: "Incoming Quotations",
     icon: "incomingQuotations",
-    route: "#",
+    route: "/incomingQuotations",
   },
-  { name: "Products", icon: "products", route: "#" },
-  { name: "My Request", icon: "myRequests", route: "#" },
-  { name: "Order History", icon: "orderHistory", route: "#" },
+  { name: "Products", icon: "products", route: "/products" },
+  { name: "My Request", icon: "myRequests", route: "/myRequests" },
+  { name: "Order History", icon: "orderHistory", route: "/orderHistory" },
   { name: "Profile", icon: "profile", route: "/profile" },
-  { name: "Settings", icon: "settings", route: "#" },
+  { name: "Settings", icon: "settings", route: "/settings" },
 ];

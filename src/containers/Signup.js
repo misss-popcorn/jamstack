@@ -11,9 +11,15 @@ import PrimaryButton from "../components/PrimaryButton";
 
 import "./Signup.scss";
 
+import signup from "../services/signup";
+
 import backGroundImage from "../images/register-bg.jpg";
+import { useEffect } from "react";
 
 const SignupContainer = () => {
+  useEffect(() => {
+    signup();
+  }, []);
   return (
     <div className="container">
       <div className="imageContainer">

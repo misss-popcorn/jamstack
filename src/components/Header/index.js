@@ -11,7 +11,7 @@ const Header = () => {
       <img src={Logo} alt="logo" className="logo" />
       <div className="logout">
         <img src={LogoutIcon} alt="icon" />
-        <Link to="/logout">Logout</Link>
+        <Link to="/login">Logout</Link>
       </div>
     </header>
   );

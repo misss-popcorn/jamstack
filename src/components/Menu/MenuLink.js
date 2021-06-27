@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Dashboard from "../../images/icons/dashboard@2x.png";
 import IncomingEnquiries from "../../images/icons/incoming-enq@2x.png";
 import IncomingQuotations from "../../images/icons/incoming-qout@2x.png";
@@ -25,8 +25,17 @@ const MenuLink = ({ menu }) => {
     <>
       <div className="menuItem">
         <img src={imageMap[menu.icon]} alt="icon"></img>
-
-        <Link to={menu.route}>{menu.name}</Link>
+        <NavLink
+          to={menu.route}
+          activeClassName={"active"}
+          isActive={(match, location) => {
+            if (match && match.url === menu.route) {
+              return true;
+            }
+          }}
+        >
+          {menu.name}
+        </NavLink>
       </div>
     </>
   );

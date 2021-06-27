@@ -21,8 +21,8 @@ const Profile = () => {
         {profileLineItems.map((lineItem) => (
           <ProfileItem item={lineItem} key={lineItem.heading} />
         ))}
+        <img className="profilePicture" src={ProfilePicture} alt="dp" />
       </div>
-      <img className="profilePicture" src={ProfilePicture} alt="dp" />
     </div>
   );
 };
