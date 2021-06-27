@@ -1,3 +1,5 @@
+import * as React from "react";
+
 import "./index.scss";
 
 import LogoImage from "../../images/logo.jpg";
@@ -9,4 +11,4 @@ const OuterLogo = () => {
     </div>
   );
 };
-export default OuterLogo;
+export default React.memo(OuterLogo);

@@ -3,7 +3,6 @@ import { useState } from "react";
 import { useHistory } from "react-router-dom";
 
 import OuterLogo from "../components/OuterLogo";
-import Form from "../components/Form";
 import Input from "../components/Input";
 import Age from "../components/SignUp/Age";
 import Gender from "../components/SignUp/Gender";
@@ -56,7 +55,7 @@ const SignupContainer = () => {
       </div>
       <div className="formContainer">
         <OuterLogo />
-        <Form>
+        <div className="form">
           <h1>Register</h1>
           <p>
             Already have an account? <Link to="/login">LogIn</Link>
@@ -89,7 +88,7 @@ const SignupContainer = () => {
           <div>
             <PrimaryButton text={"Register"} onClick={handleSignup} />
           </div>
-        </Form>
+        </div>
       </div>
     </div>
   );

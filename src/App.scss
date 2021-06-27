@@ -20,6 +20,42 @@
       font-size: 0.7rem;
       border-radius: 0.2rem;
     }
+    .form {
+      padding-top: 6rem;
+      color: #484a4c;
+
+      h1 {
+        font-weight: 400;
+      }
+      p {
+        font-size: 0.9rem;
+        font-weight: 400;
+      }
+      label {
+        display: block;
+        font-size: 0.8rem;
+        line-height: 1.5rem;
+      }
+      input,
+      select {
+        ::placeholder {
+          color: #9fabb8;
+          font-size: 0.7rem;
+          line-height: 1rem;
+        }
+
+        border: 0;
+        outline: 0;
+        background: transparent;
+        border-bottom: 1px solid #9fabb8;
+        padding: 0.5rem 0.5rem 0.5rem 0;
+        width: 100%;
+      }
+      .formField {
+        padding-top: 1rem;
+      }
+    }
+
     .forgotPassword {
       font-weight: 500rem;
       font-size: 0.6rem;

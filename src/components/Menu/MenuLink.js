@@ -1,30 +1,31 @@
+import * as React from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import PropTypes from "prop-types";
 
 import { imageMap } from "../../constants/imageMap";
 import "./MenuLink.scss";
 
-const MenuLink = ({ menu }) => {
+const MenuLink = ({ name, route, icon }) => {
   let location = useLocation();
-  let image = imageMap[menu.icon];
-  if (location.pathname === menu.route) {
-    const activeIcon = `active${menu.icon}`;
+  let image = imageMap[icon];
+  if (location.pathname === route) {
+    const activeIcon = `active${icon}`;
     image = imageMap[activeIcon];
   }
   return (
     <>
       <div className="menuItem">
         <NavLink
-          to={menu.route}
+          to={route}
           activeClassName={"active"}
           isActive={(match, location) => {
-            if (match && match.url === menu.route) {
+            if (match && match.url === route) {
               return true;
             }
           }}
         >
           <img src={image} alt="icon"></img>
-          {menu.name}
+          {name}
         </NavLink>
       </div>
     </>
@@ -32,6 +33,8 @@ const MenuLink = ({ menu }) => {
 };
 
 MenuLink.propTypes = {
-  menu: PropTypes.object.isRequired,
+  name: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired,
+  route: PropTypes.string.isRequired,
 };
-export default MenuLink;
+export default React.memo(MenuLink);

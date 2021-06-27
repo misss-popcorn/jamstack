@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 
 import OuterLogo from "../components/OuterLogo";
-import Form from "../components/Form";
+
 import { useState, useEffect } from "react";
 
 import Input from "../components/Input";
@@ -30,6 +30,7 @@ const LoginContainer = () => {
   };
 
   const handleLogin = () => {
+    console.log(loginForm);
     const fields = Object.keys(loginForm);
     for (const field of fields) {
       if (!loginForm[field]) {
@@ -48,7 +49,7 @@ const LoginContainer = () => {
       </div>
       <div className="formContainer">
         <OuterLogo />
-        <Form>
+        <div className="form">
           <h1>Login</h1>
           <p>
             Don't have a account yet? <Link to="/signup">Sign Up</Link>
@@ -77,7 +78,7 @@ const LoginContainer = () => {
           <div>
             <PrimaryButton text={"Login"} onClick={handleLogin} />
           </div>
-        </Form>
+        </div>
       </div>
     </div>
   );
