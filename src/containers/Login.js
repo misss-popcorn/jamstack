@@ -2,8 +2,7 @@ import { Link } from "react-router-dom";
 
 import OuterLogo from "../components/OuterLogo";
 import Form from "../components/Form";
-import Email from "../components/Email";
-import Password from "../components/Password";
+import Input from "../components/Input";
 import PrimaryButton from "../components/PrimaryButton";
 
 import "./Login.scss";
@@ -23,8 +22,16 @@ const LoginContainer = () => {
           <p>
             Don't have a account yet? <Link to="/signup">Sign Up</Link>
           </p>
-          <Email />
-          <Password />
+          <Input
+            type="text"
+            placeholder="Enter your email address"
+            label="Email Address"
+          />
+          <Input
+            type="password"
+            placeholder="Enter your password"
+            label="Password"
+          />
           <Link to="#" className="forgotPassword">
             Forgot Password
           </Link>
