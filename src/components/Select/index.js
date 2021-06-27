@@ -1,10 +1,14 @@
 import "./index.scss";
 
-const Select = ({ options }) => {
+const Select = ({ options, onChange, name }) => {
   return (
-    <select>
+    <select onChange={onChange} name={name}>
       {options.map((option) => {
-        return <option key={option.key}>{option.name}</option>;
+        return (
+          <option key={option.key} value={options.value}>
+            {option.name}
+          </option>
+        );
       })}
     </select>
   );

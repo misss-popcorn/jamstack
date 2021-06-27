@@ -1,9 +1,19 @@
-const Age = () => {
+import Input from "../Input";
+
+const Age = ({ name, onChange, form }) => {
+  const handleOnChange = (e) => {
+    const updatedForm = { ...form };
+    updatedForm[e.target.name] = e.target.value;
+    onChange(updatedForm);
+  };
   return (
-    <div className="formField">
-      <label>Age</label>
-      <input type="text" placeholder="Age in number" autoComplete="off" />
-    </div>
+    <Input
+      name={name}
+      type="number"
+      placeholder="Age in number"
+      label="Email Address"
+      onChange={handleOnChange}
+    />
   );
 };
 

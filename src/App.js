@@ -4,7 +4,6 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
-// import { render } from "react-dom";
 import Login from "./containers/Login.js";
 import Signup from "./containers/Signup.js";
 import Profile from "./containers/Profile.js";
