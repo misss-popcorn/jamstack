@@ -13,6 +13,6 @@ const Menu = ({ menuOptions }) => {
 };
 
 Menu.propTypes = {
-  menuOptions: PropTypes.object.isRequired,
+  menuOptions: PropTypes.array.isRequired,
 };
 export default Menu;

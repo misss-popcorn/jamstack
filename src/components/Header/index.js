@@ -10,8 +10,10 @@ const Header = () => {
     <header>
       <img src={Logo} alt="logo" className="logo" />
       <div className="logout">
-        <img src={LogoutIcon} alt="icon" />
-        <Link to="/login">Logout</Link>
+        <Link to="/login">
+          <img src={LogoutIcon} alt="icon" />
+          Logout
+        </Link>
       </div>
     </header>
   );

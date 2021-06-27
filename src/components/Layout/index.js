@@ -16,8 +16,9 @@ const Layout = ({ children, menuOptions }) => {
     </div>
   );
 };
+
 Layout.propTypes = {
   children: PropTypes.object.isRequired,
-  menuOptions: PropTypes.object.isRequired,
+  menuOptions: PropTypes.array.isRequired,
 };
 export default Layout;
