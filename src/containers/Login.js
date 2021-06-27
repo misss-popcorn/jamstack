@@ -20,7 +20,7 @@ const LoginContainer = React.memo(() => {
 
   useEffect(() => {
     if (showError) setShowError(false);
-  }, [loginForm, showError]);
+  }, [loginForm]);
 
   const handleOnChange = (e) => {
     const updatedForm = { ...loginForm };
