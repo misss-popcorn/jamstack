@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import "./index.scss";
 
 const Select = ({ options, onChange, name }) => {
@@ -13,4 +15,11 @@ const Select = ({ options, onChange, name }) => {
     </select>
   );
 };
+
+Select.propTypes = {
+  options: PropTypes.object.isRequired,
+  onChange: PropTypes.func.isRequired,
+  name: PropTypes.string.isRequired,
+};
+
 export default Select;

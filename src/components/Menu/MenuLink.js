@@ -1,4 +1,6 @@
 import { NavLink, useLocation } from "react-router-dom";
+import PropTypes from "prop-types";
+
 import { imageMap } from "../../constants/imageMap";
 import "./MenuLink.scss";
 
@@ -27,5 +29,9 @@ const MenuLink = ({ menu }) => {
       </div>
     </>
   );
+};
+
+MenuLink.propTypes = {
+  menu: PropTypes.object.isRequired,
 };
 export default MenuLink;

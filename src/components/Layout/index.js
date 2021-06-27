@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import Header from "../Header";
 import Menu from "../Menu";
 
@@ -13,5 +15,9 @@ const Layout = ({ children, menuOptions }) => {
       </div>
     </div>
   );
+};
+Layout.propTypes = {
+  children: PropTypes.object.isRequired,
+  menuOptions: PropTypes.object.isRequired,
 };
 export default Layout;

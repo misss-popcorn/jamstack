@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import Select from "../Select";
 
 const Gender = ({ name, form, onChange }) => {
@@ -18,6 +20,12 @@ const Gender = ({ name, form, onChange }) => {
       <Select options={options} onChange={handleOnChange} name={name} />
     </div>
   );
+};
+
+Gender.propTypes = {
+  name: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  form: PropTypes.object.isRequired,
 };
 
 export default Gender;

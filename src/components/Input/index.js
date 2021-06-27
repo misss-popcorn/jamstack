@@ -1,6 +1,6 @@
 import * as React from "react";
-
-const Input = ({ type, label, name, placeholder, onChange, form, value }) => {
+import PropTypes from "prop-types";
+const Input = ({ type, label, name, placeholder, onChange, value }) => {
   return (
     <div className="formField">
       <label>{label}</label>
@@ -15,4 +15,14 @@ const Input = ({ type, label, name, placeholder, onChange, form, value }) => {
     </div>
   );
 };
+
+Input.propTypes = {
+  type: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  placeholder: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  value: PropTypes.string,
+};
+
 export default Input;

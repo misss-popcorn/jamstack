@@ -13,7 +13,7 @@ import "./Login.scss";
 
 import backGroundImage from "../images/login-bg.jpg";
 
-const LoginContainer = React.memo(() => {
+const LoginContainer = () => {
   const [loginForm, setLoginForm] = useState({ email: "", password: "" });
   const [showError, setShowError] = useState(false);
   const history = useHistory();
@@ -81,6 +81,6 @@ const LoginContainer = React.memo(() => {
       </div>
     </div>
   );
-});
+};
 
 export default LoginContainer;

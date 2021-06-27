@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import "./ProfileItem.scss";
 
 const ProfileItem = ({ item }) => {
@@ -9,5 +11,9 @@ const ProfileItem = ({ item }) => {
       </div>
     </div>
   );
+};
+
+ProfileItem.propTypes = {
+  item: PropTypes.object.isRequired,
 };
 export default ProfileItem;

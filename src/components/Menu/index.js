@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import MenuLink from "./MenuLink";
 import "./index.scss";
 const Menu = ({ menuOptions }) => {
@@ -8,5 +10,9 @@ const Menu = ({ menuOptions }) => {
       ))}
     </aside>
   );
+};
+
+Menu.propTypes = {
+  menuOptions: PropTypes.object.isRequired,
 };
 export default Menu;
