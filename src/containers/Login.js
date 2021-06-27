@@ -20,6 +20,7 @@ const LoginContainer = React.memo(() => {
 
   useEffect(() => {
     if (showError) setShowError(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loginForm]);
 
   const handleOnChange = (e) => {
